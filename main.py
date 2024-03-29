@@ -47,7 +47,7 @@ with st.form("my_form"):
         img_resized = image.resize(new_size, PIL.Image.Resampling.LANCZOS)
 
     #   turn the image into a numpy array
-        image_array = np.asarray(image)
+        image_array = np.asarray(img_resized)
 
     #   Normalize the image
         normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
