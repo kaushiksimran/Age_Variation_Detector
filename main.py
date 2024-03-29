@@ -35,8 +35,8 @@ with st.form("my_form"):
     ##########################################################
 
     if submitted:
-        model = tf.keras.models.load_model("keras_Model.h5", compile=False)
-        class_names = open("labels.txt", "r").readlines()
+        model = tf.keras.models.load_model('keras_Model.h5', compile=False)
+        class_names = open('labels.txt', 'r').readlines()
 
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
