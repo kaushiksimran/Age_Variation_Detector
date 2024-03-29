@@ -3,6 +3,7 @@ from PIL import Image, ImageOps
 import numpy as np
 import tensorflow as tf
 import io
+import PIL
 
 st.header('Age Variation Detector', divider='rainbow')
 
@@ -41,6 +42,9 @@ with st.form("my_form"):
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
         image = Image.open(io.BytesIO(bytes_data)).convert("RGB")
+
+        new_size=(224, 224)
+        img_resized = image.resize(new_size, PIL.Image.Resampling.LANCZOS)
 
     #   turn the image into a numpy array
         image_array = np.asarray(image)
