@@ -75,14 +75,14 @@ with st.form("my_form"):
 
         index2 = np.argmax(prediction2)
 
-        class_name2 = class_names[index2]
+        class_name2 = class_names2[index2]
 
-        confidence_score = prediction2[0][index]
+        confidence_score = prediction2[0][index2]
 
         st.write(':blue[**Type of patient:**]', option)
         st.write(':blue[**Chronological age of the patient:**]', age)
         st.write(':blue[**Skeletal age of the patient:**]', class_name[2:])
-        st.write(':blue[**Normal or abnormal:**]', class_name[2:])
+        st.write(':blue[**Normal or abnormal:**]', class_name2[2:])
 
 
 
