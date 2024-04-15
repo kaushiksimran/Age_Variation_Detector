@@ -1,2 +1,2 @@
-0 Normal
-1 Abnormal
+0 Absent
+1 Present
