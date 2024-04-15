@@ -80,7 +80,7 @@ with st.form("my_form"):
         confidence_score = prediction2[0][index2]
 
         st.write(':blue[**Type of patient:**]', option)
-        st.write(':blue[**Chronological age of the patient:**]', age, 'years')
+        st.write(':blue[**Chronological age of the patient:**]', f"{age} years")
         st.write(':blue[**Skeletal age of the patient:**]', class_name[2:])
         st.write(':blue[**Cervical vertebral anomalies:**]', class_name2[2:])
 
